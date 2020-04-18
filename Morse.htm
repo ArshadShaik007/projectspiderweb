@@ -1,0 +1,69 @@
+<html>
+    <head>
+        <title>Factorial</title>
+        <style>
+            *{
+                margin: 0;
+                padding: 0;
+            }
+            h1{
+                margin: 5px;
+                padding: 4px;
+                float: right;
+                font-style: italic;
+                font-family: cursive;
+                text-shadow: burlywood;
+                border: 5px solid #f00;
+                color: chocolate;
+            }
+            input[type=number]{
+                background-color: rgb(207, 243, 4);
+                width: 250px;
+                height: 50px;
+                font-size: medium;
+                padding-left: 10px;
+                font-family: fantasy;
+                border-radius: 5px;
+            }
+            h3{
+                font-size: x-large;
+                padding-bottom: 10px;
+
+            }            
+            p{
+                font-size: xx-large;
+            }
+        </style>
+    </head>
+    <body>
+        <header style="background-image: url(bgm.jpg);height: 100vh;width: 194.5vh;background-position:center;background-size:cover;"><h1>Factorial Master</h1>
+            <div style="padding: 40px;margin-right:75%;margin-left: 20px;background-color: aqua;border-radius: 15px;position:fixed;background-position: 200px;">
+            <h3>Factorial Finder</h3>
+        <form>
+            <input type="number" id="number1" onkeypress=  name="Enter The Number" placeholder="Factorial No:"><br>    
+        </form>
+        <script src='jquery.js'>
+        </script>
+        <button onclick="f1()" id="Decode"  style="width: 150px;height: 35px;border-radius: 5px;font-size: x-large;background-color: chartreuse;font-family: cursive;">FindOut</button>    
+        </div>
+        <article style="padding-top: 3in;padding-left: 1in;color: deeppink;font-size: x-large;">
+            <p id="answer" style="font-family: sans-serif;"></p>
+                <script type="text/javascript" style="padding: inherit;color: inherit;">
+                function f1(){      
+                var num=Number(document.getElementById("number1").value);
+                var fact=1;
+                if(num<0||typeof(num) ){
+                    document.getElementById("answer").innerHTML="Factorial for Negitive Numbers is Not Possible";
+                }
+                else{
+                while(num>0){
+                    fact*=num;
+                    num--;
+                }
+                document.getElementById("answer").innerHTML=" Factorial of Given No:<br>"+fact;}}
+            </script>
+            <br>
+        </article>
+        </header>
+    </body>
+</html>
